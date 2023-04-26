@@ -80,16 +80,13 @@
       <LastGenOutput>StudentModel.cs</LastGenOutput>
     </Content>
     <Content Include="Service1.svc" />
+    <Content Include="StudentService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IStudentService.cs" />
     <Compile Include="Model\student.cs">
       <DependentUpon>StudentModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Student.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Student.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\StudentModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -111,18 +108,14 @@
     </Compile>
     <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentService.svc.cs">
+      <DependentUpon>StudentService.svc</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Model\Student.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Student.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Model\Student.edmx.diagram">
-      <DependentUpon>Student.edmx</DependentUpon>
-    </Content>
     <EntityDeploy Include="Model\StudentModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>StudentModel.Designer.cs</LastGenOutput>
