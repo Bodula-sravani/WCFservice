@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using WcfServiceApp.Model;
 
 namespace WcfServiceApp
 {
@@ -12,6 +13,6 @@ namespace WcfServiceApp
 	public interface IStudentService
 	{
 		[OperationContract]
-		void AddStudent();
+		void AddStudent(student obj);
 	}
 }
